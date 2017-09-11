@@ -138,8 +138,6 @@ public class PhotoActivity extends Activity {
 		if( imageUrl.startsWith("http") || imageUrl.startsWith("file") ) {
 		Picasso.with(this)
 				.load(imageUrl)
-				// .fit()
-				.centerInside()
 				.into(photo, new com.squareup.picasso.Callback() {
 					@Override
 					public void onSuccess() {
