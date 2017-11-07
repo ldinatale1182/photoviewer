@@ -70,7 +70,7 @@ public class PhotoActivity extends Activity {
 		closeBtn.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				this.onBackPressed();
+				getActivity().onBackPressed();
 			}
 		});
 
