@@ -26,7 +26,6 @@ import org.json.JSONObject;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import android.util.Log;
 
 public class PhotoActivity extends Activity {
 	private PhotoViewAttacher mAttacher;
@@ -45,7 +44,6 @@ public class PhotoActivity extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		Log.v("LUIGI", "Hello PhotoViewer!");
 		setContentView(getApplication().getResources().getIdentifier("activity_photo", "layout", getApplication().getPackageName()));
 
 		// Load the Views
@@ -96,7 +94,6 @@ public class PhotoActivity extends Activity {
 
 	@Override
 	protected void onPause() {
-		Log.v("LUIGI", "Pause log from activity!");
 		finish();
 		super.onPause();
 	}
