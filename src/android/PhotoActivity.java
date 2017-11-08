@@ -93,7 +93,9 @@ public class PhotoActivity extends Activity {
 		loadImage();
 	}
 
+	@Override
 	protected void onPause() {
+		Log.v("LUIGI", "Pause log from activity!");
 		super.onPause();
 		finish();
 	}
