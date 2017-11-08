@@ -26,6 +26,7 @@ import org.json.JSONObject;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import android.util.Log;
 
 public class PhotoActivity extends Activity {
 	private PhotoViewAttacher mAttacher;
@@ -95,8 +96,8 @@ public class PhotoActivity extends Activity {
 
 	@Override
 	protected void onPause() {
-		Log.v("LUIGI", "Pause log from activity!");
 		super.onPause();
+		Log.v("LUIGI", "Pause log from activity!");
 		finish();
 	}
 
