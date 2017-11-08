@@ -42,7 +42,6 @@ public class PhotoViewer extends CordovaPlugin {
             } catch(JSONException exception) { }
 
             if (!requiresExternalPermission || (cordova.hasPermission(READ) && cordova.hasPermission(WRITE))) {
-                Log.v("LUIGI", "LAUNCHING ACTIVITY!");
                 this.launchActivity();
             } else {
                 this.getPermission();
