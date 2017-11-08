@@ -44,7 +44,6 @@ public class PhotoActivity extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-
 		setContentView(getApplication().getResources().getIdentifier("activity_photo", "layout", getApplication().getPackageName()));
 
 		// Load the Views
@@ -93,9 +92,10 @@ public class PhotoActivity extends Activity {
 		loadImage();
 	}
 
+	@Override
 	protected void onPause() {
-		super.onPause();
 		finish();
+		super.onPause();
 	}
 
 	/**
