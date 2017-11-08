@@ -88,7 +88,7 @@ public class PhotoViewer extends CordovaPlugin {
     @Override
     protected void onPause() {
   		Log.v("LUIGI", "Pause log from PhotoViewer.java!");
-  		super.onPause();
   		finish();
+      super.onPause();
   	}
 }
