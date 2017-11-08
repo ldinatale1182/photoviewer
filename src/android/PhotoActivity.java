@@ -93,6 +93,10 @@ public class PhotoActivity extends Activity {
 		loadImage();
 	}
 
+	protected void onPause() {
+		finish();
+	}
+
 	/**
 	 * Find and Connect Views
 	 *
