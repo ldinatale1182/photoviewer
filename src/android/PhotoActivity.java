@@ -95,7 +95,6 @@ public class PhotoActivity extends Activity {
 
 	protected void onPause() {
 		super.onPause();
-		JOptionPane.showMessageDialog(null, "My Goodness, this is so concise");
 		finish();
 	}
 
