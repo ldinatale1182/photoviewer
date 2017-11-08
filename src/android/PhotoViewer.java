@@ -31,6 +31,7 @@ public class PhotoViewer extends CordovaPlugin {
 
     @Override
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
+      Log.v("LUIGI", "Hello PhotoViewer!");
         if (action.equals("show")) {
             this.args = args;
             this.callbackContext = callbackContext;
