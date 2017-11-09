@@ -12,6 +12,7 @@ import android.util.Base64;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -140,6 +141,7 @@ public class PhotoActivity extends Activity {
 	 *
 	 */
 	private void loadImage() {
+		Toast.makeText(getApplicationContext(), "Load Image Called.", Toast.LENGTH_LONG).show();
 		if( imageUrl.startsWith("http") || imageUrl.startsWith("file") ) {
 		Picasso.with(this)
 				.load(imageUrl)
@@ -151,7 +153,7 @@ public class PhotoActivity extends Activity {
 
 					@Override
 					public void onError() {
-						Toast.makeText(getActivity(), "Error loading image.", Toast.LENGTH_LONG).show();
+						Toast.makeText(getApplicationContext(), "Error loading image.", Toast.LENGTH_LONG).show();
 
 						finish();
 					}
