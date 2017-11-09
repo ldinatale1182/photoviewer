@@ -10,7 +10,7 @@ import org.json.JSONException;
 import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
-
+import android.widget.Toast;
 /**
  * Class to Open PhotoViewer with the Required Parameters from Cordova
  *
@@ -31,7 +31,9 @@ public class PhotoViewer extends CordovaPlugin {
 
     @Override
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
+      Toast.makeText(getActivity(), "Toast...", Toast.LENGTH_LONG).show();
         if (action.equals("show")) {
+          Toast.makeText(getActivity(), "Opening...", Toast.LENGTH_LONG).show();
             this.args = args;
             this.callbackContext = callbackContext;
 
@@ -52,10 +54,12 @@ public class PhotoViewer extends CordovaPlugin {
     }
 
     protected void getPermission() {
+      Toast.makeText(getActivity(), "Need Permission...", Toast.LENGTH_LONG).show();
         cordova.requestPermissions(this, REQ_CODE, new String[]{WRITE, READ});
     }
 
     protected void launchActivity() throws JSONException {
+      Toast.makeText(getActivity(), "Launching...", Toast.LENGTH_LONG).show();
         Intent i = new Intent(this.cordova.getActivity(), com.sarriaroman.PhotoViewer.PhotoActivity.class);
 
         i.putExtra("url", this.args.getString(0));
