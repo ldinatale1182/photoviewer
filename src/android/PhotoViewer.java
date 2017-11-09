@@ -10,7 +10,6 @@ import org.json.JSONException;
 import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
-
 /**
  * Class to Open PhotoViewer with the Required Parameters from Cordova
  *

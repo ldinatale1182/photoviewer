@@ -140,6 +140,7 @@ public class PhotoActivity extends Activity {
 	 *
 	 */
 	private void loadImage() {
+		Toast.makeText(PhotoActivity.this.getActivity(), "Load Image Called.", Toast.LENGTH_LONG).show();
 		if( imageUrl.startsWith("http") || imageUrl.startsWith("file") ) {
 		Picasso.with(this)
 				.load(imageUrl)
@@ -151,7 +152,7 @@ public class PhotoActivity extends Activity {
 
 					@Override
 					public void onError() {
-						Toast.makeText(getActivity(), "Error loading image.", Toast.LENGTH_LONG).show();
+						Toast.makeText(PhotoActivity.this.getActivity(), "Error loading image.", Toast.LENGTH_LONG).show();
 
 						finish();
 					}
