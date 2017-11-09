@@ -94,8 +94,33 @@ public class PhotoActivity extends Activity {
 
 	@Override
 	protected void onPause() {
+		Toast.makeText(PhotoActivity.this.getActivity(), "Pause.", Toast.LENGTH_LONG).show();
 		finish();
 		super.onPause();
+	}
+
+	@Override
+	protected void onStop() {
+		Toast.makeText(PhotoActivity.this.getActivity(), "Stop.", Toast.LENGTH_LONG).show();
+		super.onStop();
+	}
+
+	@Override
+	protected void onDestroy() {
+		Toast.makeText(PhotoActivity.this.getActivity(), "Destroy.", Toast.LENGTH_LONG).show();
+		super.onDestroy();
+	}
+
+	@Override
+	protected void onRestart() {
+		super.onRestart();
+		Toast.makeText(PhotoActivity.this.getActivity(), "Restart.", Toast.LENGTH_LONG).show();
+	}
+
+	@Override
+	protected void onStart() {
+		super.onStart();
+		Toast.makeText(PhotoActivity.this.getActivity(), "Start.", Toast.LENGTH_LONG).show();
 	}
 
 	/**
@@ -140,7 +165,6 @@ public class PhotoActivity extends Activity {
 	 *
 	 */
 	private void loadImage() {
-		Toast.makeText(PhotoActivity.this.getActivity(), "Load Image Called.", Toast.LENGTH_LONG).show();
 		if( imageUrl.startsWith("http") || imageUrl.startsWith("file") ) {
 		Picasso.with(this)
 				.load(imageUrl)
