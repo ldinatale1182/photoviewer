@@ -102,12 +102,14 @@ public class PhotoActivity extends Activity {
 	@Override
 	protected void onStop() {
 		Toast.makeText(PhotoActivity.this.getActivity(), "Stop.", Toast.LENGTH_LONG).show();
+		finish();
 		super.onStop();
 	}
 
 	@Override
 	protected void onDestroy() {
 		Toast.makeText(PhotoActivity.this.getActivity(), "Destroy.", Toast.LENGTH_LONG).show();
+		finish();
 		super.onDestroy();
 	}
 
