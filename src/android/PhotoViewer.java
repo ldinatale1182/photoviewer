@@ -30,9 +30,7 @@ public class PhotoViewer extends CordovaPlugin {
 
     @Override
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
-      // Toast toast = Toast.makeText(this, "Toast...", Toast.LENGTH_LONG).show();
         if (action.equals("show")) {
-          // Toast toast = Toast.makeText(this, "Opening...", Toast.LENGTH_LONG).show();
             this.args = args;
             this.callbackContext = callbackContext;
 
@@ -53,12 +51,10 @@ public class PhotoViewer extends CordovaPlugin {
     }
 
     protected void getPermission() {
-      // Toast toast = Toast.makeText(this, "Need Permission...", Toast.LENGTH_LONG).show();
         cordova.requestPermissions(this, REQ_CODE, new String[]{WRITE, READ});
     }
 
     protected void launchActivity() throws JSONException {
-      // Toast toast = Toast.makeText(this, "Launching...", Toast.LENGTH_LONG).show();
         Intent i = new Intent(this.cordova.getActivity(), com.sarriaroman.PhotoViewer.PhotoActivity.class);
 
         i.putExtra("url", this.args.getString(0));
